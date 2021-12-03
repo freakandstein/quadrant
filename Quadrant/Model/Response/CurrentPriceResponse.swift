@@ -25,7 +25,7 @@ struct Bpi: Codable {
     }
 }
 
-// MARK: - Eur
+// MARK: - Currency
 struct Currency: Codable {
     let code, symbol, rate, description: String
     let rateFloat: Double
