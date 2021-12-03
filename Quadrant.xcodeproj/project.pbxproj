@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181FE11E74C513A2B0188E6F /* Pods_Quadrant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B04A7BACB452785B1C6340F8 /* Pods_Quadrant.framework */; };
+		4055A40985B5E44DC5FED0E9 /* Pods_Quadrant_QuadrantUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1757D3BEE90D216F711E86 /* Pods_Quadrant_QuadrantUITests.framework */; };
+		7E7E82A62759B5AF00EB2B1B /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7E82A52759B5AF00EB2B1B /* ErrorResponse.swift */; };
+		7E7E82A92759B66200EB2B1B /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7E82A82759B66200EB2B1B /* MainService.swift */; };
+		7E7E82AC2759B75A00EB2B1B /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7E82AB2759B75A00EB2B1B /* AppSetting.swift */; };
+		7E7E82AE2759B97C00EB2B1B /* AppSettingConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7E82AD2759B97C00EB2B1B /* AppSettingConstant.swift */; };
+		7E7E82B02759CFE400EB2B1B /* CurrentPriceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7E82AF2759CFE400EB2B1B /* CurrentPriceResponse.swift */; };
+		7E7E82B32759D9C900EB2B1B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7E82B22759D9C900EB2B1B /* String+Extension.swift */; };
 		7EE0399827599E8600AACC71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0399727599E8600AACC71 /* AppDelegate.swift */; };
 		7EE0399A27599E8600AACC71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0399927599E8600AACC71 /* SceneDelegate.swift */; };
 		7EE0399C27599E8600AACC71 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0399B27599E8600AACC71 /* MainView.swift */; };
@@ -16,6 +24,8 @@
 		7EE039B927599E8800AACC71 /* QuadrantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE039B827599E8800AACC71 /* QuadrantUITests.swift */; };
 		7EE039BB27599E8800AACC71 /* QuadrantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE039BA27599E8800AACC71 /* QuadrantUITestsLaunchTests.swift */; };
 		7EE039CC27599FA000AACC71 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EE039CB27599FA000AACC71 /* MainView.xib */; };
+		7EE039CE2759ABA500AACC71 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE039CD2759ABA500AACC71 /* NetworkService.swift */; };
+		87DFEAD67FD6C90501D18B92 /* Pods_QuadrantTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357CB6CE1B6BA7C2117113C3 /* Pods_QuadrantTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C3118E513ACE92CCEC88FFB /* Pods-Quadrant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quadrant.release.xcconfig"; path = "Target Support Files/Pods-Quadrant/Pods-Quadrant.release.xcconfig"; sourceTree = "<group>"; };
+		1B1757D3BEE90D216F711E86 /* Pods_Quadrant_QuadrantUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quadrant_QuadrantUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C830A86CBA744F7E2A6E13C /* Pods-QuadrantTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuadrantTests.debug.xcconfig"; path = "Target Support Files/Pods-QuadrantTests/Pods-QuadrantTests.debug.xcconfig"; sourceTree = "<group>"; };
+		357CB6CE1B6BA7C2117113C3 /* Pods_QuadrantTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuadrantTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EBF7B0C05B145F16BF1C4E /* Pods-Quadrant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quadrant.debug.xcconfig"; path = "Target Support Files/Pods-Quadrant/Pods-Quadrant.debug.xcconfig"; sourceTree = "<group>"; };
+		6E1CAC3423BA2B50AB2DBC30 /* Pods-Quadrant-QuadrantUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quadrant-QuadrantUITests.debug.xcconfig"; path = "Target Support Files/Pods-Quadrant-QuadrantUITests/Pods-Quadrant-QuadrantUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E7E82A52759B5AF00EB2B1B /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		7E7E82A82759B66200EB2B1B /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		7E7E82AB2759B75A00EB2B1B /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
+		7E7E82AD2759B97C00EB2B1B /* AppSettingConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingConstant.swift; sourceTree = "<group>"; };
+		7E7E82AF2759CFE400EB2B1B /* CurrentPriceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPriceResponse.swift; sourceTree = "<group>"; };
+		7E7E82B22759D9C900EB2B1B /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7EE0399427599E8600AACC71 /* Quadrant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quadrant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE0399727599E8600AACC71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EE0399927599E8600AACC71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +71,10 @@
 		7EE039B827599E8800AACC71 /* QuadrantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrantUITests.swift; sourceTree = "<group>"; };
 		7EE039BA27599E8800AACC71 /* QuadrantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrantUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7EE039CB27599FA000AACC71 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		7EE039CD2759ABA500AACC71 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B04A7BACB452785B1C6340F8 /* Pods_Quadrant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quadrant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1418D243856388C9201F96 /* Pods-QuadrantTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuadrantTests.release.xcconfig"; path = "Target Support Files/Pods-QuadrantTests/Pods-QuadrantTests.release.xcconfig"; sourceTree = "<group>"; };
+		E3EF75726C8E25521363049A /* Pods-Quadrant-QuadrantUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quadrant-QuadrantUITests.release.xcconfig"; path = "Target Support Files/Pods-Quadrant-QuadrantUITests/Pods-Quadrant-QuadrantUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181FE11E74C513A2B0188E6F /* Pods_Quadrant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87DFEAD67FD6C90501D18B92 /* Pods_QuadrantTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +98,77 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4055A40985B5E44DC5FED0E9 /* Pods_Quadrant_QuadrantUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13E676CB4B6A0770A1996864 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46EBF7B0C05B145F16BF1C4E /* Pods-Quadrant.debug.xcconfig */,
+				0C3118E513ACE92CCEC88FFB /* Pods-Quadrant.release.xcconfig */,
+				6E1CAC3423BA2B50AB2DBC30 /* Pods-Quadrant-QuadrantUITests.debug.xcconfig */,
+				E3EF75726C8E25521363049A /* Pods-Quadrant-QuadrantUITests.release.xcconfig */,
+				1C830A86CBA744F7E2A6E13C /* Pods-QuadrantTests.debug.xcconfig */,
+				DA1418D243856388C9201F96 /* Pods-QuadrantTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3981F5DCD53CF92CF064A24A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B04A7BACB452785B1C6340F8 /* Pods_Quadrant.framework */,
+				1B1757D3BEE90D216F711E86 /* Pods_Quadrant_QuadrantUITests.framework */,
+				357CB6CE1B6BA7C2117113C3 /* Pods_QuadrantTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E7E82A32759B56B00EB2B1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E7E82A42759B59800EB2B1B /* Response */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E7E82A42759B59800EB2B1B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				7E7E82A52759B5AF00EB2B1B /* ErrorResponse.swift */,
+				7E7E82AF2759CFE400EB2B1B /* CurrentPriceResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		7E7E82A72759B63800EB2B1B /* FeatureService */ = {
+			isa = PBXGroup;
+			children = (
+				7E7E82A82759B66200EB2B1B /* MainService.swift */,
+			);
+			path = FeatureService;
+			sourceTree = "<group>";
+		};
+		7E7E82AA2759B6FF00EB2B1B /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				7E7E82AD2759B97C00EB2B1B /* AppSettingConstant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		7E7E82B12759D9BA00EB2B1B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7E7E82B22759D9C900EB2B1B /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		7EE0398B27599E8600AACC71 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +176,8 @@
 				7EE039AD27599E8800AACC71 /* QuadrantTests */,
 				7EE039B727599E8800AACC71 /* QuadrantUITests */,
 				7EE0399527599E8600AACC71 /* Products */,
+				13E676CB4B6A0770A1996864 /* Pods */,
+				3981F5DCD53CF92CF064A24A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +194,7 @@
 		7EE0399627599E8600AACC71 /* Quadrant */ = {
 			isa = PBXGroup;
 			children = (
+				7E7E82A32759B56B00EB2B1B /* Model */,
 				7EE039C927599F2D00AACC71 /* Service */,
 				7EE039C827599F0A00AACC71 /* Feature */,
 				7EE039C727599EFD00AACC71 /* Common */,
@@ -131,6 +227,9 @@
 		7EE039C727599EFD00AACC71 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7E7E82B12759D9BA00EB2B1B /* Extension */,
+				7E7E82AA2759B6FF00EB2B1B /* Constant */,
+				7E7E82AB2759B75A00EB2B1B /* AppSetting.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -146,6 +245,8 @@
 		7EE039C927599F2D00AACC71 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				7E7E82A72759B63800EB2B1B /* FeatureService */,
+				7EE039CD2759ABA500AACC71 /* NetworkService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -166,9 +267,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EE039BE27599E8800AACC71 /* Build configuration list for PBXNativeTarget "Quadrant" */;
 			buildPhases = (
+				916A98FE78D17F3CA518F442 /* [CP] Check Pods Manifest.lock */,
 				7EE0399027599E8600AACC71 /* Sources */,
 				7EE0399127599E8600AACC71 /* Frameworks */,
 				7EE0399227599E8600AACC71 /* Resources */,
+				35DA34769B16755FA6B412A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +286,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EE039C127599E8800AACC71 /* Build configuration list for PBXNativeTarget "QuadrantTests" */;
 			buildPhases = (
+				9FB5D64875272AACA65E4702 /* [CP] Check Pods Manifest.lock */,
 				7EE039A627599E8800AACC71 /* Sources */,
 				7EE039A727599E8800AACC71 /* Frameworks */,
 				7EE039A827599E8800AACC71 /* Resources */,
@@ -201,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EE039C427599E8800AACC71 /* Build configuration list for PBXNativeTarget "QuadrantUITests" */;
 			buildPhases = (
+				28D16732B9AD89A1A2CD55E3 /* [CP] Check Pods Manifest.lock */,
 				7EE039B027599E8800AACC71 /* Sources */,
 				7EE039B127599E8800AACC71 /* Frameworks */,
 				7EE039B227599E8800AACC71 /* Resources */,
+				D4D27A46F70F87762DBFF607 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,13 +391,123 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28D16732B9AD89A1A2CD55E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quadrant-QuadrantUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35DA34769B16755FA6B412A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quadrant/Pods-Quadrant-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quadrant/Pods-Quadrant-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Quadrant/Pods-Quadrant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		916A98FE78D17F3CA518F442 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quadrant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FB5D64875272AACA65E4702 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuadrantTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4D27A46F70F87762DBFF607 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quadrant-QuadrantUITests/Pods-Quadrant-QuadrantUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quadrant-QuadrantUITests/Pods-Quadrant-QuadrantUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Quadrant-QuadrantUITests/Pods-Quadrant-QuadrantUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7EE0399027599E8600AACC71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E7E82A62759B5AF00EB2B1B /* ErrorResponse.swift in Sources */,
 				7EE0399C27599E8600AACC71 /* MainView.swift in Sources */,
+				7E7E82AC2759B75A00EB2B1B /* AppSetting.swift in Sources */,
+				7E7E82B02759CFE400EB2B1B /* CurrentPriceResponse.swift in Sources */,
+				7E7E82A92759B66200EB2B1B /* MainService.swift in Sources */,
+				7E7E82AE2759B97C00EB2B1B /* AppSettingConstant.swift in Sources */,
 				7EE0399827599E8600AACC71 /* AppDelegate.swift in Sources */,
+				7EE039CE2759ABA500AACC71 /* NetworkService.swift in Sources */,
+				7E7E82B32759D9C900EB2B1B /* String+Extension.swift in Sources */,
 				7EE0399A27599E8600AACC71 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +674,7 @@
 		};
 		7EE039BF27599E8800AACC71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46EBF7B0C05B145F16BF1C4E /* Pods-Quadrant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -486,6 +703,7 @@
 		};
 		7EE039C027599E8800AACC71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C3118E513ACE92CCEC88FFB /* Pods-Quadrant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -514,6 +732,7 @@
 		};
 		7EE039C227599E8800AACC71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C830A86CBA744F7E2A6E13C /* Pods-QuadrantTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -539,6 +758,7 @@
 		};
 		7EE039C327599E8800AACC71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA1418D243856388C9201F96 /* Pods-QuadrantTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -564,6 +784,7 @@
 		};
 		7EE039C527599E8800AACC71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E1CAC3423BA2B50AB2DBC30 /* Pods-Quadrant-QuadrantUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -587,6 +808,7 @@
 		};
 		7EE039C627599E8800AACC71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3EF75726C8E25521363049A /* Pods-Quadrant-QuadrantUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
