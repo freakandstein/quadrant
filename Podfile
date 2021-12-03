@@ -5,6 +5,7 @@ target 'Quadrant' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Moya', '~> 15.0'
+  pod 'Charts', '~> 3.6.0'
   # Pods for Quadrant
 
   target 'QuadrantTests' do

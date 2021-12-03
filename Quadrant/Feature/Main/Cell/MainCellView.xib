@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainCellView" rowHeight="135" id="enh-0j-kfn" customClass="MainCellView" customModule="Quadrant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="529" height="135"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="enh-0j-kfn" id="EOu-mF-5K7">
+                <rect key="frame" x="0.0" y="0.0" width="529" height="135"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qh9-e1-LkA">
+                        <rect key="frame" x="0.0" y="16" width="529" height="103"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Time: 11:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jN6-tL-dJp">
+                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD: 60.852.8787" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnQ-RJ-Zoh">
+                                <rect key="frame" x="0.0" y="27" width="157" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude: 22.4444" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdp-sE-1Cj">
+                                <rect key="frame" x="0.0" y="54" width="167.5" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude: 33.3333" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yg-t7-UPb">
+                                <rect key="frame" x="0.0" y="81" width="151.5" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H50-nm-kWQ" userLabel="LineView">
+                        <rect key="frame" x="0.0" y="132" width="529" height="3"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="3" id="MXd-sZ-LK6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qh9-e1-LkA" secondAttribute="bottom" constant="16" id="0nW-FZ-CFq"/>
+                    <constraint firstItem="H50-nm-kWQ" firstAttribute="leading" secondItem="EOu-mF-5K7" secondAttribute="leading" id="6JC-mu-MKt"/>
+                    <constraint firstAttribute="trailing" secondItem="H50-nm-kWQ" secondAttribute="trailing" id="AJV-qR-IwP"/>
+                    <constraint firstItem="qh9-e1-LkA" firstAttribute="leading" secondItem="EOu-mF-5K7" secondAttribute="leading" id="eN0-a8-PiK"/>
+                    <constraint firstAttribute="trailing" secondItem="qh9-e1-LkA" secondAttribute="trailing" id="few-rv-NQA"/>
+                    <constraint firstItem="qh9-e1-LkA" firstAttribute="top" secondItem="EOu-mF-5K7" secondAttribute="top" constant="16" id="ngA-Xm-bzy"/>
+                    <constraint firstAttribute="bottom" secondItem="H50-nm-kWQ" secondAttribute="bottom" id="xcV-uL-bwC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="latitudeLabel" destination="4Yg-t7-UPb" id="S6g-qZ-uYK"/>
+                <outlet property="longitudeLabel" destination="xdp-sE-1Cj" id="7Xg-la-O2a"/>
+                <outlet property="timeLabel" destination="jN6-tL-dJp" id="oAV-SI-ztH"/>
+                <outlet property="valueLabel" destination="GnQ-RJ-Zoh" id="3H5-rx-Ry8"/>
+            </connections>
+            <point key="canvasLocation" x="-94.927536231884062" y="-39.84375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

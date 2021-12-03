@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainView" customModule="Quadrant" customModuleProvider="target">
             <connections>
+                <outlet property="chartView" destination="Tni-2g-SoW" id="bjM-w8-X1s"/>
+                <outlet property="dateLabel" destination="nEE-em-gXs" id="U1h-id-10G"/>
+                <outlet property="refreshButton" destination="BxL-0U-K0I" id="WsW-fe-Fnj"/>
+                <outlet property="tableView" destination="tiy-zz-vsH" id="h5p-fe-rs2"/>
                 <outlet property="view" destination="iN0-l3-epB" id="uce-OD-SJA"/>
             </connections>
         </placeholder>
@@ -18,12 +23,82 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin Price Index" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jo6-Vn-wWW">
+                    <rect key="frame" x="32" y="60" width="350" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="cbE-y1-ayV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue, 2 Nov 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEE-em-gXs">
+                    <rect key="frame" x="32" y="104" width="350" height="29"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tni-2g-SoW" customClass="LineChartView" customModule="Charts">
+                    <rect key="frame" x="32" y="157" width="350" height="280"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="445-4o-hOU"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tiy-zz-vsH">
+                    <rect key="frame" x="32" y="445" width="350" height="353"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kQO-YT-cua"/>
+                        <outlet property="delegate" destination="-1" id="qOm-8Z-b43"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxL-0U-K0I">
+                    <rect key="frame" x="48" y="814" width="318" height="48"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="1J2-DU-8iE"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Refresh">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="BxL-0U-K0I" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="48" id="2cF-cP-MXo"/>
+                <constraint firstItem="nEE-em-gXs" firstAttribute="top" secondItem="Jo6-Vn-wWW" secondAttribute="bottom" constant="8" symbolic="YES" id="6wf-4s-V7j"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Jo6-Vn-wWW" secondAttribute="trailing" constant="32" id="7l5-ik-sIZ"/>
+                <constraint firstItem="Jo6-Vn-wWW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="BN4-YS-ked"/>
+                <constraint firstItem="Jo6-Vn-wWW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="FwK-a9-2E9"/>
+                <constraint firstItem="tiy-zz-vsH" firstAttribute="top" secondItem="Tni-2g-SoW" secondAttribute="bottom" constant="8" id="HjA-DM-FIU"/>
+                <constraint firstItem="nEE-em-gXs" firstAttribute="width" secondItem="Jo6-Vn-wWW" secondAttribute="width" id="M3e-2C-9K0"/>
+                <constraint firstItem="nEE-em-gXs" firstAttribute="leading" secondItem="Jo6-Vn-wWW" secondAttribute="leading" id="ToL-6W-9LC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BxL-0U-K0I" secondAttribute="trailing" constant="48" id="VCB-Nl-IFJ"/>
+                <constraint firstItem="tiy-zz-vsH" firstAttribute="leading" secondItem="Tni-2g-SoW" secondAttribute="leading" id="a31-dj-ezg"/>
+                <constraint firstItem="Tni-2g-SoW" firstAttribute="leading" secondItem="nEE-em-gXs" secondAttribute="leading" id="c4i-Hr-m9f"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BxL-0U-K0I" secondAttribute="bottom" id="cbW-Kk-LWh"/>
+                <constraint firstItem="Tni-2g-SoW" firstAttribute="top" secondItem="nEE-em-gXs" secondAttribute="bottom" constant="24" id="dZX-yx-AOd"/>
+                <constraint firstItem="BxL-0U-K0I" firstAttribute="top" secondItem="tiy-zz-vsH" secondAttribute="bottom" constant="16" id="eb6-A9-sfq"/>
+                <constraint firstItem="Tni-2g-SoW" firstAttribute="trailing" secondItem="nEE-em-gXs" secondAttribute="trailing" id="luk-sW-u2w"/>
+                <constraint firstItem="nEE-em-gXs" firstAttribute="trailing" secondItem="Jo6-Vn-wWW" secondAttribute="trailing" id="phH-ym-CAl"/>
+                <constraint firstItem="tiy-zz-vsH" firstAttribute="trailing" secondItem="Tni-2g-SoW" secondAttribute="trailing" id="yaL-4G-9Rk"/>
+            </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
