@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="chartView" destination="Tni-2g-SoW" id="bjM-w8-X1s"/>
                 <outlet property="dateLabel" destination="nEE-em-gXs" id="U1h-id-10G"/>
+                <outlet property="loadingIndicator" destination="Akv-ew-tY1" id="EcA-Ph-CyI"/>
                 <outlet property="refreshButton" destination="BxL-0U-K0I" id="WsW-fe-Fnj"/>
                 <outlet property="tableView" destination="tiy-zz-vsH" id="h5p-fe-rs2"/>
                 <outlet property="view" destination="iN0-l3-epB" id="uce-OD-SJA"/>
@@ -54,6 +55,14 @@
                         <outlet property="delegate" destination="-1" id="qOm-8Z-b43"/>
                     </connections>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Akv-ew-tY1">
+                    <rect key="frame" x="183" y="429" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="7D7-wX-oEQ"/>
+                        <constraint firstAttribute="height" constant="48" id="WZu-0Z-PgJ"/>
+                    </constraints>
+                    <color key="color" name="AccentColor"/>
+                </activityIndicatorView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxL-0U-K0I">
                     <rect key="frame" x="48" y="814" width="318" height="48"/>
                     <color key="backgroundColor" name="AccentColor"/>
@@ -69,12 +78,16 @@
                             <integer key="value" value="8"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="refreshButtonClicked" destination="-1" eventType="touchUpInside" id="K98-tC-j2Z"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="BxL-0U-K0I" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="48" id="2cF-cP-MXo"/>
+                <constraint firstItem="Akv-ew-tY1" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="4mw-bx-Ik5"/>
                 <constraint firstItem="nEE-em-gXs" firstAttribute="top" secondItem="Jo6-Vn-wWW" secondAttribute="bottom" constant="8" symbolic="YES" id="6wf-4s-V7j"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Jo6-Vn-wWW" secondAttribute="trailing" constant="32" id="7l5-ik-sIZ"/>
                 <constraint firstItem="Jo6-Vn-wWW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="BN4-YS-ked"/>
@@ -83,6 +96,7 @@
                 <constraint firstItem="nEE-em-gXs" firstAttribute="width" secondItem="Jo6-Vn-wWW" secondAttribute="width" id="M3e-2C-9K0"/>
                 <constraint firstItem="nEE-em-gXs" firstAttribute="leading" secondItem="Jo6-Vn-wWW" secondAttribute="leading" id="ToL-6W-9LC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BxL-0U-K0I" secondAttribute="trailing" constant="48" id="VCB-Nl-IFJ"/>
+                <constraint firstItem="Akv-ew-tY1" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Vlh-ED-Ob1"/>
                 <constraint firstItem="tiy-zz-vsH" firstAttribute="leading" secondItem="Tni-2g-SoW" secondAttribute="leading" id="a31-dj-ezg"/>
                 <constraint firstItem="Tni-2g-SoW" firstAttribute="leading" secondItem="nEE-em-gXs" secondAttribute="leading" id="c4i-Hr-m9f"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BxL-0U-K0I" secondAttribute="bottom" id="cbW-Kk-LWh"/>
