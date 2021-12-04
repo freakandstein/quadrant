@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct PriceIndex {
-    var time: String
-    var value: String
+struct PriceIndex: Codable {
+    var dateTime: String
+    var value: Double
     var longitude: String
     var latitude: String
+    
+    static let structName = String(describing: PriceIndex.self)
 }
