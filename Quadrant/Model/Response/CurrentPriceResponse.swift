@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - CurrentPrice
-struct CurrentPrice: Codable {
+struct CurrentPriceResponse: Codable {
     let time: Time
     let disclaimer, chartName: String
     let bpi: Bpi
