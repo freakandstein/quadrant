@@ -38,4 +38,12 @@ enum UIConstant {
             return rawValue
         }
     }
+    
+    enum Alpha: Double {
+        case medium =  0.5
+        
+        var value: Double {
+            return rawValue
+        }
+    }
 }
