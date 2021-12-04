@@ -45,7 +45,7 @@ class Provider: NetworkServiceProtocol {
                         case 502:
                             errorMessage = "Bad Gateway"
                         default:
-                            errorMessage = "General Error"
+                            errorMessage = "Unknown Error"
                         }
                         completion(.failure(.errorResponse(code: statusCode, message: errorMessage)))
                     } else {
@@ -53,11 +53,13 @@ class Provider: NetworkServiceProtocol {
                         let result = try filteredResponse.map(model)
                         completion(.success(result))
                     }
-                } catch(let error) {
-                    completion(.failure(error))
+                } catch {
+                    let errorMessage = "Decoding Error"
+                    completion(.failure(.errorResponse(code: response.statusCode, message: errorMessage)))
                 }
             case .failure(let error):
-                completion(.failure(error))
+                let errorMessage = "Unknown Error"
+                completion(.failure(.errorResponse(code: error.errorCode, message: errorMessage)))
             }
         }
     }
