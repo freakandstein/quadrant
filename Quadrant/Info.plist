@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Need request your location to get location when getting current price index</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Need request your location to get location when getting current price index</string>
 	<key>Config</key>
 	<dict>
 		<key>BaseURL</key>

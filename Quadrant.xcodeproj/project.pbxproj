@@ -19,6 +19,12 @@
 		7E7E82BA275A064700EB2B1B /* MainCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7E82B9275A064700EB2B1B /* MainCellView.swift */; };
 		7ED32543275A0E5B009E4665 /* PriceIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED32542275A0E5B009E4665 /* PriceIndex.swift */; };
 		7ED32546275ABD2F009E4665 /* UIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED32545275ABD2F009E4665 /* UIConstant.swift */; };
+		7ED3254A275AC229009E4665 /* MainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED32549275AC229009E4665 /* MainProtocol.swift */; };
+		7ED3254C275AC29C009E4665 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3254B275AC29C009E4665 /* MainPresenter.swift */; };
+		7ED3254E275AC2BD009E4665 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3254D275AC2BD009E4665 /* MainInteractor.swift */; };
+		7ED32550275B7087009E4665 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3254F275B7087009E4665 /* DataService.swift */; };
+		7ED32552275B8794009E4665 /* DateFormatConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED32551275B8794009E4665 /* DateFormatConstant.swift */; };
+		7ED32554275BD35D009E4665 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED32553275BD35D009E4665 /* LocationService.swift */; };
 		7EE0399827599E8600AACC71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0399727599E8600AACC71 /* AppDelegate.swift */; };
 		7EE0399A27599E8600AACC71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0399927599E8600AACC71 /* SceneDelegate.swift */; };
 		7EE0399C27599E8600AACC71 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0399B27599E8600AACC71 /* MainView.swift */; };
@@ -66,6 +72,12 @@
 		7E7E82B9275A064700EB2B1B /* MainCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellView.swift; sourceTree = "<group>"; };
 		7ED32542275A0E5B009E4665 /* PriceIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceIndex.swift; sourceTree = "<group>"; };
 		7ED32545275ABD2F009E4665 /* UIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstant.swift; sourceTree = "<group>"; };
+		7ED32549275AC229009E4665 /* MainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocol.swift; sourceTree = "<group>"; };
+		7ED3254B275AC29C009E4665 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		7ED3254D275AC2BD009E4665 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		7ED3254F275B7087009E4665 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		7ED32551275B8794009E4665 /* DateFormatConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatConstant.swift; sourceTree = "<group>"; };
+		7ED32553275BD35D009E4665 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		7EE0399427599E8600AACC71 /* Quadrant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quadrant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE0399727599E8600AACC71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EE0399927599E8600AACC71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +179,7 @@
 			children = (
 				7E7E82AD2759B97C00EB2B1B /* AppSettingConstant.swift */,
 				7ED32545275ABD2F009E4665 /* UIConstant.swift */,
+				7ED32551275B8794009E4665 /* DateFormatConstant.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -266,6 +279,8 @@
 			children = (
 				7E7E82A72759B63800EB2B1B /* FeatureService */,
 				7EE039CD2759ABA500AACC71 /* NetworkService.swift */,
+				7ED3254F275B7087009E4665 /* DataService.swift */,
+				7ED32553275BD35D009E4665 /* LocationService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -276,6 +291,9 @@
 				7E7E82B6275A060600EB2B1B /* Cell */,
 				7EE0399B27599E8600AACC71 /* MainView.swift */,
 				7EE039CB27599FA000AACC71 /* MainView.xib */,
+				7ED32549275AC229009E4665 /* MainProtocol.swift */,
+				7ED3254B275AC29C009E4665 /* MainPresenter.swift */,
+				7ED3254D275AC2BD009E4665 /* MainInteractor.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -526,13 +544,19 @@
 				7EE0399C27599E8600AACC71 /* MainView.swift in Sources */,
 				7E7E82AC2759B75A00EB2B1B /* AppSetting.swift in Sources */,
 				7E7E82B02759CFE400EB2B1B /* CurrentPriceResponse.swift in Sources */,
+				7ED32554275BD35D009E4665 /* LocationService.swift in Sources */,
 				7E7E82A92759B66200EB2B1B /* MainService.swift in Sources */,
 				7E7E82AE2759B97C00EB2B1B /* AppSettingConstant.swift in Sources */,
 				7ED32546275ABD2F009E4665 /* UIConstant.swift in Sources */,
 				7EE0399827599E8600AACC71 /* AppDelegate.swift in Sources */,
+				7ED32552275B8794009E4665 /* DateFormatConstant.swift in Sources */,
+				7ED3254C275AC29C009E4665 /* MainPresenter.swift in Sources */,
+				7ED3254A275AC229009E4665 /* MainProtocol.swift in Sources */,
 				7EE039CE2759ABA500AACC71 /* NetworkService.swift in Sources */,
 				7E7E82B32759D9C900EB2B1B /* String+Extension.swift in Sources */,
 				7EE0399A27599E8600AACC71 /* SceneDelegate.swift in Sources */,
+				7ED3254E275AC2BD009E4665 /* MainInteractor.swift in Sources */,
+				7ED32550275B7087009E4665 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
