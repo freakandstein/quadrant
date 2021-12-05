@@ -40,7 +40,7 @@ protocol MainPresenterToInteractor {
     var presenter: MainInteractorToPresenter? { get set }
     var networkService: NetworkService { get set }
     var dataService: DataServiceProtocol { get set }
-    var locationService: LocationProtocol { get set }
+    var locationService: LocationServiceProtocol { get set }
     
     func getCurrencyIndex()
     func loadCurrencyIndex() -> [PriceIndex]

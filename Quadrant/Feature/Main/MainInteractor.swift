@@ -11,7 +11,7 @@ class MainInteractor: MainPresenterToInteractor {
     var presenter: MainInteractorToPresenter?
     var networkService: NetworkService = NetworkService(networkServiceProtocol: Provider(isDebugMode: true))
     var dataService: DataServiceProtocol = DataService.shared
-    var locationService: LocationProtocol = LocationService.shared
+    var locationService: LocationServiceProtocol = LocationService.shared
     
     func getCurrencyIndex() {
         networkService.request(target: MainService.getCurrentPrice, model: CurrentPriceResponse.self) { [weak self] result in

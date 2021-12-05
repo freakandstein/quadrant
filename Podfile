@@ -10,6 +10,8 @@ target 'Quadrant' do
 
   target 'QuadrantTests' do
     inherit! :search_paths
+    pod 'Quick', '~> 4.0.0'
+    pod 'Nimble', '~> 9.2.1'
     # Pods for testing
   end
 

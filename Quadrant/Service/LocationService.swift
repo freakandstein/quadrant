@@ -8,13 +8,13 @@
 import Foundation
 import MapKit
 
-protocol LocationProtocol: AnyObject {
+protocol LocationServiceProtocol: AnyObject {
     func getLatitude() -> Double
     func getLongitude() -> Double
     func requestLocation()
 }
 
-class LocationProvider: NSObject, LocationProtocol, CLLocationManagerDelegate {
+class LocationProvider: NSObject, LocationServiceProtocol, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     private var location: CLLocation?
     
@@ -56,5 +56,5 @@ class LocationProvider: NSObject, LocationProtocol, CLLocationManagerDelegate {
 }
 
 class LocationService {
-    static let shared: LocationProtocol = LocationProvider()
+    static let shared: LocationServiceProtocol = LocationProvider()
 }
