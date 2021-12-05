@@ -86,7 +86,7 @@ class MainPresenter: MainViewToPresenter {
         return listPriceIndex
     }
     
-    private func renderView() {
+    func renderView() {
         view?.updateChart()
         view?.reloadTableView()
         view?.dismissLoading()

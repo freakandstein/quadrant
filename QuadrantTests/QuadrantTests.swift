@@ -224,6 +224,29 @@ class QuadrantTests: QuickSpec {
                     expect(interactorMock.isGetCurrencyIndexCalled).to(beTrue())
                 }
             }
+            
+            context("populateChartDataEntry function") {
+                it("called") {
+                    let chartDataEntries = sut.populateChartDataEntry()
+                    expect(chartDataEntries.count).to(equal(0))
+                }
+            }
+            
+            context("renderView function") {
+                it("called") {
+                    sut.renderView()
+                    expect(viewMock.isUpdateChartCalled).to(beTrue())
+                    expect(viewMock.isReloadTableViewCalled).to(beTrue())
+                    expect(viewMock.isDismissLoadingCalled).to(beTrue())
+                }
+            }
+            
+            context("getMaxAxis function") {
+                it("called") {
+                    let maxAxis = sut.getMaxAxis()
+                    expect(maxAxis).to(equal(15566))
+                }
+            }
         }
         
         //MARK: Unit Test MainViewInteractor
