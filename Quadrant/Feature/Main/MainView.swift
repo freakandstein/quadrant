@@ -109,7 +109,7 @@ class MainView: UIViewController, MainPresenterToView {
     }
     
     @IBAction func refreshButtonClicked() {
-        presenter?.viewDidLoad()
+        presenter?.getCurrencyIndexPrice()
     }
     
 }

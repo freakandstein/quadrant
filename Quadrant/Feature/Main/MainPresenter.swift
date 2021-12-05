@@ -13,21 +13,20 @@ class MainPresenter: MainViewToPresenter {
     var interactor: MainPresenterToInteractor?
     var currentPrice: CurrentPriceResponse?
     var listPriceIndex: [PriceIndex] = []
-    var latestPriceIndex: [PriceIndex] = []
     
     func viewDidLoad() {
         view?.showLoading()
-        interactor?.getCurrencyIndex()
+        interactor?.getDailyCurrencyIndex()
         view?.setupTableView()
         view?.setupChart()
     }
     
     func getTotalPriceIndex() -> Int {
-        return latestPriceIndex.count
+        return listPriceIndex.count
     }
     
     func getPriceIndex(index: Int) -> PriceIndex {
-        return latestPriceIndex[index]
+        return listPriceIndex[index]
     }
     
     func getTimePriceIndex(index: Int) -> String {
@@ -57,20 +56,42 @@ class MainPresenter: MainViewToPresenter {
     
     func populateChartDataEntry() -> [ChartDataEntry] {
         var chartDataEntries: [ChartDataEntry] = []
-        for priceIndex in listPriceIndex {
-            let day = Double(priceIndex.dateTime.formatDateInString(convertDateTo: DateFormatConstant.days.value)) ?? .zero
-            let chartDataEntry = ChartDataEntry(x: day, y: priceIndex.value)
-            chartDataEntries.append(chartDataEntry)
+        if let allListPriceIndex = interactor?.loadCurrencyIndex() {
+            for priceIndex in allListPriceIndex {
+                let hours = Double(priceIndex.dateTime.formatDateInString(convertDateTo: DateFormatConstant.hours.value)) ?? .zero
+                let chartDataEntry = ChartDataEntry(x: hours, y: priceIndex.value)
+                chartDataEntries.append(chartDataEntry)
+            }
         }
         return chartDataEntries
     }
     
     func getMaxAxis() -> Double {
-        guard let priceIndex = latestPriceIndex.first else { return .zero }
+        guard let priceIndex = listPriceIndex.first else { return .zero }
         let rounded = priceIndex.value.rounded(.towardZero)
         let maxAxis = rounded + 10_000
         return maxAxis
     }
+    
+    func getCurrencyIndexPrice() {
+        view?.showLoading()
+        interactor?.getCurrencyIndex()
+    }
+    
+    private func pickLatestCurrencyIndex() -> [PriceIndex] {
+        var listPriceIndex = interactor?.loadCurrencyIndex() ?? []
+        if listPriceIndex.count > 5 {
+            listPriceIndex = Array(listPriceIndex.prefix(5))
+        }
+        return listPriceIndex
+    }
+    
+    private func renderView() {
+        view?.updateChart()
+        view?.reloadTableView()
+        view?.dismissLoading()
+    }
+    
 }
 
 extension MainPresenter: MainInteractorToPresenter {
@@ -82,22 +103,24 @@ extension MainPresenter: MainInteractorToPresenter {
     
     func didGetCurrencyIndexSuccess(response: CurrentPriceResponse) {
         currentPrice = response
-        listPriceIndex = interactor?.loadCurrencyIndex() ?? []
-        if listPriceIndex.count > 5 {
-            latestPriceIndex = Array(listPriceIndex.prefix(5))
-        } else {
-            latestPriceIndex = listPriceIndex
-        }
+        listPriceIndex = pickLatestCurrencyIndex()
         let currentDate = currentPrice?.time.updatedISO.formatDateInString(convertDateTo: DateFormatConstant.daily.value)
         view?.updateDateTitle(dateText: currentDate ?? .emptyString)
-        view?.updateChart()
-        view?.reloadTableView()
-        view?.dismissLoading()
+        renderView()
     }
     
     func didGetCurrencyIndexFailure(error: ErrorResponse) {
         view?.dismissLoading()
         debugPrint(error)
+    }
+    
+    func didLoadCurrencyIndexSuccess(priceIndex: PriceIndex) {
+        listPriceIndex = pickLatestCurrencyIndex()
+        let currentDate = priceIndex.dateTime.formatDateInString(convertDateTo: DateFormatConstant.daily.value)
+        view?.updateDateTitle(dateText: currentDate)
+        DispatchQueue.main.asyncAfter(deadline: .now() + UIConstant.Duration.glance.value, execute: {
+            self.renderView()
+        })
     }
 
 }

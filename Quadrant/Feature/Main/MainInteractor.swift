@@ -27,8 +27,10 @@ class MainInteractor: MainPresenterToInteractor {
                         listPriceindex.append(priceIndex)
                         let sortedList = listPriceindex.sorted { $0.dateTime.toDate().compare($1.dateTime.toDate()) == .orderedDescending }
                         try self?.dataService.save(data: sortedList, key: PriceIndex.structName)
-                        self?.presenter?.didGetCurrencyIndexSuccess(response: response)
+                    } else {
+                        try self?.dataService.save(data: [priceIndex], key: PriceIndex.structName)
                     }
+                    self?.presenter?.didGetCurrencyIndexSuccess(response: response)
                 } catch {
                     self?.presenter?.didGetCurrencyIndexFailure(error: .saveError())
                 }
@@ -54,5 +56,20 @@ class MainInteractor: MainPresenterToInteractor {
     
     func getCurrentLocation() {
         locationService.requestLocation()
+    }
+    
+    func getDailyCurrencyIndex() {
+        let listPriceIndex = loadCurrencyIndex()
+        let today = Date().toString(withFormat: DateFormatConstant.days.value)
+        let listPriceIndexDaily = listPriceIndex.filter {
+            return ($0.dateTime.toDate().toString(withFormat: DateFormatConstant.days.value) == today)
+        }
+        let sortedList = listPriceIndexDaily.sorted { $0.dateTime.toDate().compare($1.dateTime.toDate()) == .orderedDescending }
+        try? dataService.save(data: sortedList, key: PriceIndex.structName)
+        if let latestPriceIndex = sortedList.first {
+            presenter?.didLoadCurrencyIndexSuccess(priceIndex: latestPriceIndex)
+        } else {
+            getCurrencyIndex()
+        }
     }
 }

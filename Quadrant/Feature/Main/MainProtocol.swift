@@ -21,6 +21,7 @@ protocol MainViewToPresenter {
     func getLatitudePriceIndex(index: Int) -> String
     func populateChartDataEntry() -> [ChartDataEntry]
     func getMaxAxis() -> Double
+    func getCurrencyIndexPrice()
 }
 
 protocol MainPresenterToView {
@@ -44,13 +45,14 @@ protocol MainPresenterToInteractor {
     func getCurrencyIndex()
     func loadCurrencyIndex() -> [PriceIndex]
     func getCurrentLocation()
+    func getDailyCurrencyIndex()
 }
 
 protocol MainInteractorToPresenter {
     var currentPrice: CurrentPriceResponse? { get set }
     var listPriceIndex: [PriceIndex] { get set }
-    var latestPriceIndex: [PriceIndex] { get set }
     
     func didGetCurrencyIndexSuccess(response: CurrentPriceResponse)
     func didGetCurrencyIndexFailure(error: ErrorResponse)
+    func didLoadCurrencyIndexSuccess(priceIndex: PriceIndex)
 }
