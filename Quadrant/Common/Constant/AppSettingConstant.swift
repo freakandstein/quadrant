@@ -11,6 +11,7 @@ enum AppSettingConstant {
     enum Key: String {
         case config = "Config"
         case baseURL = "BaseURL"
+        case backgroundTaskId = "BackgroundTaskId"
         
         var value: String {
             return rawValue

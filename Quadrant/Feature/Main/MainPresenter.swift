@@ -91,7 +91,6 @@ class MainPresenter: MainViewToPresenter {
         view?.reloadTableView()
         view?.dismissLoading()
     }
-    
 }
 
 extension MainPresenter: MainInteractorToPresenter {
@@ -106,7 +105,9 @@ extension MainPresenter: MainInteractorToPresenter {
         listPriceIndex = pickLatestCurrencyIndex()
         let currentDate = currentPrice?.time.updatedISO.formatDateInString(convertDateTo: DateFormatConstant.daily.value)
         view?.updateDateTitle(dateText: currentDate ?? .emptyString)
-        renderView()
+        DispatchQueue.main.asyncAfter(deadline: .now() + UIConstant.Duration.glance.value, execute: {
+            self.renderView()
+        })
     }
     
     func didGetCurrencyIndexFailure(error: ErrorResponse) {

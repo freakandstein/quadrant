@@ -2,12 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Need request your location to get location when getting current price index</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Need request your location to get location when getting current price index</string>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.playground.quadrant.fetch</string>
+	</array>
 	<key>Config</key>
 	<dict>
+		<key>BackgroundTaskId</key>
+		<string>com.playground.quadrant.fetch</string>
 		<key>BaseURL</key>
 		<string>https://api.coindesk.com/</string>
 	</dict>
@@ -28,5 +30,10 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
+	</array>
 </dict>
 </plist>

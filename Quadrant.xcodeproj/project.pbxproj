@@ -735,6 +735,8 @@
 				DEVELOPMENT_TEAM = 8A4LK3PM33;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Quadrant/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need request your location to get location when getting current price index";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need request your location to get location when getting current price index";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -764,6 +766,8 @@
 				DEVELOPMENT_TEAM = 8A4LK3PM33;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Quadrant/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need request your location to get location when getting current price index";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need request your location to get location when getting current price index";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
